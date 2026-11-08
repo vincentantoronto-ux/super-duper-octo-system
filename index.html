@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soup Ratio Bistro</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Neighborhood Kitchen</p>
+          <h1>Soup Ratio Bistro</h1>
+        </div>
+        <div class="stats" aria-label="Game stats">
+          <div class="stat">
+            <span class="label">Cash</span>
+            <strong id="money">$0</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Reputation</span>
+            <strong id="reputation">0</strong>
+          </div>
+          <div class="stat">
+            <span class="label">Day</span>
+            <strong id="day">1</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="panel store-panel">
+          <div class="panel-header">
+            <h2>Produce Market</h2>
+          </div>
+          <div id="store" class="store"></div>
+        </section>
+
+        <section class="panel cooking-panel">
+          <div class="panel-header">
+            <h2>Soup Pot</h2>
+            <button id="clear-pot" class="secondary-btn">Clear Pot</button>
+          </div>
+
+          <div id="pot" class="pot-list"></div>
+
+          <div class="pot-summary">
+            <div>
+              <span>Total soup</span>
+              <strong id="total-soup">0</strong>
+            </div>
+            <div>
+              <span>Current ratio</span>
+              <strong id="ratio-readout">0:0:0</strong>
+            </div>
+          </div>
+
+          <div class="action-row">
+            <button id="serve-btn" class="primary-btn">Serve Soup</button>
+            <button id="next-customer-btn" class="secondary-btn">Next Customer</button>
+          </div>
+        </section>
+
+        <section class="panel order-panel">
+          <div class="panel-header">
+            <h2>Customer Order</h2>
+          </div>
+
+          <div class="customer-card">
+            <p class="customer-tag">Customer</p>
+            <h3 id="customer-name">Loading...</h3>
+            <p id="customer-order" class="order-text">Needs a special soup.</p>
+            <div id="order-bars" class="order-bars"></div>
+          </div>
+
+          <div class="result-box">
+            <p class="result-label">Kitchen Notes</p>
+            <div id="message" class="message success">Ready to cook.</div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
